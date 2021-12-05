@@ -29,7 +29,7 @@ public class CarControl : MonoBehaviour
         this.GetComponent<CharacterController>().SimpleMove(delta);
         if (delta.magnitude > 0.1f){
             if (gamma != 0){
-                transform.localRotation *= Quaternion.Euler(0.0f, gamma * this.speed * Time.deltaTime * 2, 0.0f);
+                transform.localRotation *= Quaternion.Euler(0.0f, gamma * this.speed * Time.deltaTime * 4, 0.0f);
             }
             if (speed < 10f){
                 speed += .01f;
